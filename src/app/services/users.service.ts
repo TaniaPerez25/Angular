@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserResult } from '../interfaces/user';
 import { languageResult } from '../interfaces/language';
+import{ PostResult } from '../interfaces/posts';
+import{ CommentResult } from '../interfaces/comments';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +23,13 @@ export class UsersService {
   getLanguages(){
     return this.http.get<languageResult>("https://localhost:3000/languages");
   }
+  
+  getComments(){
+    return this.http.get<CommentResult>("http://localhost:3000/comments");
+  }
 
+  getPosts(){
+    return this.http.get<PostResult>("http://localhost:3000/posts");
+  }
   
 }

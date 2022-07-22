@@ -7,6 +7,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { MaintenanceComponent } from './pages/maintenance/maintenance.component';
+import { CommentComponent } from './pages/comments/comments.component';
+import { PostComponent } from './pages/posts/posts.component';
 import { AuthGuard } from './guard/auth.guard';
 import { MainComponent } from './admin/main/main.component';
 
@@ -29,6 +31,12 @@ const routes: Routes = [
   },
   {
     path:"maintenance",component:MaintenanceComponent, title:"Maintenance"
+  },
+  {
+    path:"comments",component:CommentComponent, title:"Comments"
+  },
+  {
+    path:"posts",component:PostComponent, title:"Posts"
   },
   {
     path:'',pathMatch:'full',redirectTo:'/home', data:{pageRouteName:'Home page'}
